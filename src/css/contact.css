@@ -130,6 +130,72 @@
   min-height: 100px;
 }
 
+/* Альтернативный вариант связи в форме */
+.contact__form-alt {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact__form-alt .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.contact__form-alt .divider::before,
+.contact__form-alt .divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.contact__form-alt-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.contact__form-phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 12px 24px;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.contact__form-phone:hover {
+  background: var(--primary-dim);
+  box-shadow: 0 0 20px rgba(200, 230, 0, 0.2);
+}
+
+.contact__form-phone svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .contact__form-alt {
+    margin-top: 16px;
+  }
+
+  .contact__form-phone {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact {
     padding: 80px 0;

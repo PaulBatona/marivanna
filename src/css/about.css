@@ -21,32 +21,13 @@
   margin-bottom: 0;
 }
 
-.about__image-placeholder {
+.about__image-photo {
   width: 100%;
   aspect-ratio: 4 / 5;
-  background: var(--card);
+  object-fit: cover;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  color: var(--text-dim);
-  font-size: 0.85rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.about__image-placeholder::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(200, 230, 0, 0.03) 0%, transparent 60%);
-}
-
-.placeholder-icon {
-  opacity: 0.3;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 768px) {
@@ -63,7 +44,7 @@
     order: -1;
   }
 
-  .about__image-placeholder {
+  .about__image-photo {
     aspect-ratio: 16 / 10;
   }
 }

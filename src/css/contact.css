@@ -5,7 +5,7 @@
 }
 
 .contact::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -55,6 +55,33 @@
 
 .contact__detail a:hover {
   color: var(--primary);
+}
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--text-secondary);
+}
+
+.hours-list li:first-child {
+  margin-top: 4px;
+}
+
+.hours-list span:last-child {
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-align: right;
 }
 
 .contact__form {

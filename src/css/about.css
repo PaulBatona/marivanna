@@ -46,5 +46,6 @@
 
   .about__image-photo {
     aspect-ratio: 16 / 10;
+    object-position: center -100px;
   }
 }

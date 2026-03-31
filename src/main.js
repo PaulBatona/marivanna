@@ -4,6 +4,7 @@ import "./css/hero.css";
 import "./css/about.css";
 import "./css/advantages.css";
 import "./css/prices.css";
+import "./css/rules.css";
 import "./css/contact.css";
 import "./css/footer.css";
 

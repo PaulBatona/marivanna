@@ -1,10 +1,13 @@
 .advantages {
   padding: 120px 0;
+  min-height: 900px;
   position: relative;
   background-image: url("/assets/advantages-bg.jpg");
   background-size: cover;
   background-position: center -400px;
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
 }
 
 .advantages::before {
@@ -33,11 +36,18 @@
   z-index: 2;
 }
 
+.advantages > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
 .advantages__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 48px;
+  width: 100%;
 }
 
 .advantage-card {
@@ -74,14 +84,14 @@
 }
 
 .advantage-card__icon {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: var(--radius-sm);
   background: var(--primary-dim);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: var(--primary);
   transition: all var(--transition);
 }
@@ -114,6 +124,7 @@
 @media (max-width: 768px) {
   .advantages {
     padding: 80px 0;
+    min-height: 500px;
     background-attachment: scroll;
   }
 

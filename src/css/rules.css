@@ -1,0 +1,113 @@
+.rules {
+  padding: 120px 0;
+  background: var(--surface);
+  position: relative;
+}
+
+.rules::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.rules::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.rules__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.rules__card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.rules__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.rules__card:hover {
+  background: var(--card-hover);
+  transform: translateY(-4px);
+  border-color: rgba(200, 230, 0, 0.15);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.rules__card:hover::before {
+  opacity: 1;
+}
+
+.rules__card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--primary);
+  transition: all var(--transition);
+}
+
+.rules__card:hover .rules__card-icon {
+  background: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 24px rgba(200, 230, 0, 0.3);
+}
+
+.rules__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.rules__card-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .rules {
+    padding: 80px 0;
+  }
+
+  .rules__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .rules__card {
+    padding: 28px 20px;
+  }
+}

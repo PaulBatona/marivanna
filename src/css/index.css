@@ -22,8 +22,8 @@
   --radius: 12px;
   --radius-sm: 8px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
   --container: 1200px;
 }
 
@@ -142,6 +142,19 @@ textarea {
   width: 100%;
 }
 
+.btn--outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 10px rgba(200, 230, 0, 0.1);
+}
+
+.btn--outline:hover {
+  background: var(--primary-dim);
+  box-shadow: 0 0 20px rgba(200, 230, 0, 0.25);
+  transform: translateY(-2px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -156,7 +169,10 @@ textarea {
 /* Global Parallax Coals */
 .global-coals {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 10;
   overflow: hidden;
@@ -169,22 +185,102 @@ textarea {
   pointer-events: none;
 }
 
-.gc-1 { width: 100px; top: 10%; left: 10%; filter: blur(2px) drop-shadow(0 0 20px rgba(255, 106, 0, 0.5)); transform: rotate(-15deg); }
-.gc-2 { width: 55px; top: 25%; right: 12%; filter: blur(0px) drop-shadow(0 0 10px rgba(255, 106, 0, 0.6)); transform: rotate(25deg); }
-.gc-3 { width: 150px; top: 38%; left: 5%; filter: blur(3px) drop-shadow(0 0 30px rgba(255, 106, 0, 0.8)); transform: rotate(10deg); }
-.gc-4 { width: 80px; top: 52%; right: 15%; filter: blur(1px) drop-shadow(0 0 15px rgba(255, 106, 0, 0.6)); transform: rotate(-30deg); }
-.gc-5 { width: 60px; top: 65%; left: 20%; filter: blur(0px) drop-shadow(0 0 10px rgba(255, 106, 0, 0.5)); transform: rotate(45deg); }
-.gc-6 { width: 120px; top: 78%; right: 8%; filter: blur(2px) drop-shadow(0 0 25px rgba(255, 106, 0, 0.8)); transform: rotate(-20deg); }
-.gc-7 { width: 75px; top: 90%; left: 15%; filter: blur(1px) drop-shadow(0 0 15px rgba(255, 106, 0, 0.6)); transform: rotate(15deg); }
-.gc-8 { width: 110px; top: 96%; right: 20%; filter: blur(1.5px) drop-shadow(0 0 20px rgba(255, 106, 0, 0.7)); transform: rotate(-10deg); }
+.gc-1 {
+  width: 100px;
+  top: 10%;
+  left: 10%;
+  filter: blur(2px) drop-shadow(0 0 20px rgba(255, 106, 0, 0.5));
+  transform: rotate(-15deg);
+}
+.gc-2 {
+  width: 55px;
+  top: 25%;
+  right: 12%;
+  filter: blur(0px) drop-shadow(0 0 10px rgba(255, 106, 0, 0.6));
+  transform: rotate(25deg);
+}
+.gc-3 {
+  width: 150px;
+  top: 38%;
+  left: 5%;
+  filter: blur(3px) drop-shadow(0 0 30px rgba(255, 106, 0, 0.8));
+  transform: rotate(10deg);
+}
+.gc-4 {
+  width: 80px;
+  top: 52%;
+  right: 15%;
+  filter: blur(1px) drop-shadow(0 0 15px rgba(255, 106, 0, 0.6));
+  transform: rotate(-30deg);
+}
+.gc-5 {
+  width: 60px;
+  top: 65%;
+  left: 20%;
+  filter: blur(0px) drop-shadow(0 0 10px rgba(255, 106, 0, 0.5));
+  transform: rotate(45deg);
+}
+.gc-6 {
+  width: 120px;
+  top: 78%;
+  right: 8%;
+  filter: blur(2px) drop-shadow(0 0 25px rgba(255, 106, 0, 0.8));
+  transform: rotate(-20deg);
+}
+.gc-7 {
+  width: 75px;
+  top: 90%;
+  left: 15%;
+  filter: blur(1px) drop-shadow(0 0 15px rgba(255, 106, 0, 0.6));
+  transform: rotate(15deg);
+}
+.gc-8 {
+  width: 110px;
+  top: 96%;
+  right: 20%;
+  filter: blur(1.5px) drop-shadow(0 0 20px rgba(255, 106, 0, 0.7));
+  transform: rotate(-10deg);
+}
 
 @media (max-width: 768px) {
-  .gc-1 { width: 70px; left: 5%; top: 5%; }
-  .gc-2 { width: 40px; right: 5%; top: 20%; }
-  .gc-3 { width: 100px; left: 15%; top: 35%; }
-  .gc-4 { width: 55px; right: 10%; top: 50%; }
-  .gc-5 { width: 40px; left: 10%; top: 65%; }
-  .gc-6 { width: 80px; right: 5%; top: 80%; }
-  .gc-7 { width: 55px; left: 5%; top: 92%; }
-  .gc-8 { width: 75px; right: 10%; top: 98%; }
+  .gc-1 {
+    width: 70px;
+    left: 5%;
+    top: 5%;
+  }
+  .gc-2 {
+    width: 40px;
+    right: 5%;
+    top: 20%;
+  }
+  .gc-3 {
+    width: 100px;
+    left: 15%;
+    top: 35%;
+  }
+  .gc-4 {
+    width: 55px;
+    right: 10%;
+    top: 50%;
+  }
+  .gc-5 {
+    width: 40px;
+    left: 10%;
+    top: 65%;
+  }
+  .gc-6 {
+    width: 80px;
+    right: 5%;
+    top: 80%;
+  }
+  .gc-7 {
+    width: 55px;
+    left: 5%;
+    top: 92%;
+  }
+  .gc-8 {
+    width: 75px;
+    right: 10%;
+    top: 98%;
+  }
 }

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Marivanna — кальянная и бар в Элисте. Премиальные кальяны, авторские коктейли, уютная атмосфера. Ул. Клыкова, 7"
+      content="Marivanna — кальянная в Элисте. Премиальные кальяны, авторские напитки, уютная атмосфера. Ул. Клыкова, 7"
     />
-    <title>Marivanna — Кальянная и бар в Элисте</title>
+    <title>Marivanna — Кальянная в Элисте</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,6 +26,7 @@
           <li><a href="#about" class="nav__link">О нас</a></li>
           <li><a href="#advantages" class="nav__link">Преимущества</a></li>
           <li><a href="#prices" class="nav__link">Меню</a></li>
+          <li><a href="#rules" class="nav__link">Правила</a></li>
           <li><a href="#contact" class="nav__link">Контакты</a></li>
         </ul>
         <a href="tel:+79276460333" class="nav__phone">+7 (927) 646-03-33</a>
@@ -68,9 +69,12 @@
         <div class="hero__content">
           <img src="/assets/logo.svg" alt="Marivanna" class="hero__logo" />
           <p class="hero__tagline">Место, где время замедляется</p>
-          <a href="#contact" class="btn btn--primary hero__cta"
-            >Забронировать столик</a
-          >
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--primary hero__cta"
+              >Забронировать столик</a
+            >
+            <a href="#prices" class="btn btn--outline hero__menu">Меню</a>
+          </div>
         </div>
         <div class="hero__scroll-hint">
           <span>Листай вниз</span>
@@ -129,14 +133,27 @@
               <div class="advantage-card__icon">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
                   <path
-                    d="M12 2s-5 6-5 10a5 5 0 0010 0c0-4-5-10-5-10z"
+                    d="M7 4h10v2H7V4z"
                     stroke="currentColor"
                     stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
-                    d="M12 18v4M8 22h8"
+                    d="M6 6v2c0 2 2 4 2 6v4h8v-4c0-2 2-4 2-6V6H6z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 18v2h6v-2"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M7 22h10"
                     stroke="currentColor"
                     stroke-width="1.5"
                     stroke-linecap="round"
@@ -218,7 +235,7 @@
               Кальяны
             </button>
             <button class="prices__tab" data-tab="drinks">Напитки</button>
-            <button class="prices__tab" data-tab="bar">Бар</button>
+            <button class="prices__tab" data-tab="bar">Напитки</button>
             <button class="prices__tab" data-tab="snacks">Снеки</button>
             <button class="prices__tab" data-tab="extra">Дополнительно</button>
           </div>
@@ -362,6 +379,51 @@
                 <span class="price-item__dots"></span>
                 <span class="price-item__price">300 ₽</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rules" id="rules">
+        <div class="container">
+          <span class="section-label">Важно знать</span>
+          <h2 class="section-title section-title--center">
+            Правила <span class="accent">заведения</span>
+          </h2>
+          <div class="rules__grid">
+            <div class="rules__card">
+              <div class="rules__card-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="rules__card-title">Система штрафов</h3>
+              <p class="rules__card-text">
+                За порчу посуды или кальяна взимается штраф
+              </p>
+            </div>
+            <div class="rules__card">
+              <div class="rules__card-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="rules__card-title">Кальянная политика</h3>
+              <p class="rules__card-text">
+                1 кальян обязателен всегда • 2 кальяна при компании от 6 человек
+              </p>
             </div>
           </div>
         </div>
@@ -515,7 +577,21 @@
             </form>
           </div>
         </div>
-      </section>
+      </div>
+      <div class="contact__map">
+        <div class="container">
+          <div class="map-container">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?ll=44.273559%2C46.307164&z=17&pt=44.273559,46.307164,~pm2blm&mode=map"
+              width="100%"
+              height="450"
+              frameborder="0"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
     </main>
 
     <footer class="footer">
@@ -523,7 +599,7 @@
         <div class="footer__grid">
           <div class="footer__brand">
             <img src="/assets/logo.svg" alt="Marivanna" class="footer__logo" />
-            <p class="footer__text">Кальянная и бар в самом сердце Элисты</p>
+            <p class="footer__text">Кальянная в самом сердце Элисты</p>
           </div>
           <nav class="footer__nav">
             <h4>Навигация</h4>
@@ -532,6 +608,7 @@
               <li><a href="#about">О нас</a></li>
               <li><a href="#advantages">Преимущества</a></li>
               <li><a href="#prices">Меню</a></li>
+              <li><a href="#rules">Правила</a></li>
               <li><a href="#contact">Контакты</a></li>
             </ul>
           </nav>
